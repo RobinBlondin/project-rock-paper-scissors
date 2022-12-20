@@ -1,35 +1,39 @@
 
-let playerSelection = prompt('Please choose between rock, paper and scissors:'); // asking user for a selection
+let playerSelection = prompt('Please choose between rock, paper and scissors:').toLowerCase(); // asking user for a selection
 
-while (["rock", "paper", "scissors"].indexOf(playerSelection.toLowerCase()) === -1) 
+while (["rock", "paper", "scissors"].indexOf(playerSelection) === -1) 
 {
-    playerSelection = prompt('You need to choose between rock, paper or scissors. Please try again!'); // Makes sure that user input is correct for this program to work
-    console.log(playerSelection);
+    playerSelection = prompt('You need to choose between rock, paper or scissors. Please try again!').toLowerCase(); // Makes sure that user input is correct for this program to work
 }
 
-let computerSelection = ()  => {
+
+
+let computerSelection = ()  => 
+{
     let rps = ['rock', 'paper', 'scissors'];  
     return rps[Math.floor(Math.random() * 3)];  // Stores a random choice into computerSelection
 };
 
 
-function playRound(computerSelection, playerSelection) {
-
-    if (computerSelection == playerSelection.toLowerCase())
+function playRound(computerSelection, playerSelection) 
+{
+    
+    if (computerSelection == playerSelection)
     {
         return "It's a draw!"
     }
     else if (computerSelection == 'rock')
     {
-        return (playerSelection.toLowerCase() == 'paper') ? 'You win!' : 'You lose!'
+        return (playerSelection == 'paper') ? 'Computer chose rock, You win!' : 'Computer chose rock, You lose!'
     }
     else if (computerSelection == 'paper')
     {
-        return (playerSelection.toLowerCase() == 'scissors') ? 'You win!' : 'You lose!'
+        return (playerSelection == 'scissors') ? 'Computer chose paper, You win!' : 'Computer chose paper, You lose!'
     }
     else if (computerSelection == 'scissors')
     {
-        return (playerSelection.toLowerCase() == 'rock') ? 'You win!' : 'You lose!'
+        return (playerSelection == 'rock') ? 'Computer chose scissors, You win!' : 'Computer chose scissors, You lose!'
     }
 }
+
 console.log(playRound(computerSelection(), playerSelection));

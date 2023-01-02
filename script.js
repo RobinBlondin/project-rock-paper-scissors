@@ -74,4 +74,4 @@ function game()
         console.log('\n\n' + "Close! It's a draw!");
 }
 
-console.log(game())
+//console.log(game())

@@ -1,0 +1,46 @@
+body {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    background-image: url('images/background2.jpg');
+    background-size: cover;
+}
+
+.container {
+    height: 33.3%;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 33.3%;
+    gap: 100px;
+}
+
+.button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.4);
+    border-style: solid;
+    border-width: medium;
+    border-radius: 2rem;
+    border-color: orange ;
+    gap: 40px;
+    padding: 10px;
+}
+
+.buttonImg {
+    height: 230px;
+    width: 200px;
+}
+
+.buttonText {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bolder;
+    font-size: 30px;
+}

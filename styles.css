@@ -1,14 +1,18 @@
 body {
     display: flex;
-    justify-content: center;
-    flex-direction: row;
-    align-items: center;
+    flex-direction: column;
     background-image: url('images/background2.jpg');
     background-size: cover;
 }
 
-.container {
-    height: 33.3%;
+.header{
+    display: flex;
+    height: 500px;
+}
+
+.footer {
+    display: flex;
+    height: 200px;
 }
 
 .buttons {
@@ -16,7 +20,7 @@ body {
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    height: 33.3%;
+    height: 380px;
     gap: 100px;
 }
 
